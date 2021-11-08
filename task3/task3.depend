@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1635953366 source:d:\iti\labs\c projects\lab2\bin\task3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
