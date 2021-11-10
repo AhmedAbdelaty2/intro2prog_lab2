@@ -10,8 +10,7 @@ int main()
     for(i=0;i<5;i++)
     {
         scanf("%d", &in);
-        //(max<in)?max=in:max=max;
-        //(min>in)?min=in:min=min;
+
         if(max<in)
             max = in;
         if(min>in)

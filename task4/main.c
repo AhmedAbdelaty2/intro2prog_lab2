@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
+
+void gotoxy1(int x, int y);
 
 int main()
 {
@@ -12,8 +15,10 @@ int main()
 
     for(i=1;i<=size*size;i++)
     {
-        printf("R=%d, C=%d, %d\n", r, c, i);
-        if(i%3)
+        gotoxy1((c)*10,(r)*5);
+        //printf("R=%d, C=%d, %d\n", r, c, i);
+        printf("%d", i);
+        if(i%size)
         {
             r = r-1;
             c = c-1;
@@ -32,4 +37,12 @@ int main()
 
 
     return 0;
+}
+
+void gotoxy1(int x, int y)
+{
+COORD coord;
+coord.X = x;
+coord.Y = y;
+SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
